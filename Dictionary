@@ -1,0 +1,110 @@
+Dictionaries in Python
+
+Theory
+A dictionary in Python is a collection of key-value pairs. Each key is unique and is used to access the corresponding value.
+Dictionaries are mutable, meaning you can change their content after they are created. They are particularly useful when you need to associate pieces of data with unique identifiers.
+
+Key Characteristics of Dictionaries:
+Unordered: Unlike lists, dictionaries do not maintain any order for their elements.
+Mutable: You can add, remove, or change items.
+Keys: Must be immutable types (e.g., strings, numbers, tuples).
+Values: Can be of any type and can be duplicated.
+
+Example 
+
+# Creating a dictionary
+student = {
+    "name": "John Doe",
+    "age": 20,
+    "major": "Computer Science"
+}
+
+# Accessing values
+print(student["name"])  # Output: John Doe
+
+# Adding a new key-value pair
+student["graduation_year"] = 2025
+
+# Modifying an existing value
+student["age"] = 21
+
+# Removing a key-value pair
+del student["major"]
+
+# Print the updated dictionary
+print(student)
+
+
+Common Dictionary Methods
+1. get()
+Description:
+Returns the value for a specified key. If the key is not found, it returns a default value (None if not specified), which helps avoid errors when accessing missing keys.
+
+d = {'name': 'Alice', 'age': 30}
+print(d.get('age'))  # Output: 30
+print(d.get('gender', 'Not specified'))  # Output: Not specified
+
+2. keys()
+Description:
+Returns a view object that displays a list of all the keys in the dictionary. This is useful for iterating over keys.
+
+d = {'name': 'Alice', 'age': 30}
+print(list(d.keys()))  # Output: ['name', 'age']
+
+3. values()
+Description:
+Returns a view object that displays a list of all values in the dictionary. This is useful for iterating over values.
+
+d = {'name': 'Alice', 'age': 30}
+print(list(d.values()))  # Output: ['Alice', 30]
+
+4. items()
+Description:
+Returns a view object that displays a list of the dictionary's key-value tuple pairs. Useful for iterating over both keys and values.
+
+d = {'name': 'Alice', 'age': 30}
+print(list(d.items()))  # Output: [('name', 'Alice'), ('age', 30)]
+
+5. update()
+Description:
+Updates the dictionary with elements from another dictionary or an iterable of key-value pairs. This is useful for merging dictionaries.
+d1 = {'name': 'Alice'}
+d2 = {'age': 30, 'city': 'New York'}
+d1.update(d2)
+print(d1)  # Output: {'name': 'Alice', 'age': 30, 'city': 'New York'}
+
+6. pop()
+Description:
+Removes and returns the value for a specified key. If the key is not found, it can return a default value if specified.
+
+d = {'name': 'Alice', 'age': 30}
+age = d.pop('age')
+print(age)  # Output: 30
+print(d)    # Output: {'name': 'Alice'}
+
+7. popitem()
+Description:
+Removes and returns the last inserted key-value pair as a tuple. Useful for iterative processing of dictionary items.
+
+d = {'name': 'Alice', 'age': 30}
+item = d.popitem()
+print(item)  # Output: ('age', 30)
+print(d)     # Output: {'name': 'Alice'}
+
+8. setdefault()
+Description:
+Returns the value of a specified key. If the key does not exist, it inserts the key with a specified default value.
+
+d = {'name': 'Alice'}
+gender = d.setdefault('gender', 'Female')
+print(gender)  # Output: Female
+print(d)       # Output: {'name': 'Alice', 'gender': 'Female'}
+
+9. clear()
+Description:
+Removes all items from the dictionary, leaving it empty.
+
+d = {'name': 'Alice', 'age': 30}
+d.clear()
+print(d)  # Output: {}
+
