@@ -1,1 +1,27 @@
+Day 1
+Numpy stands for numerical python. It works primarly with numerical data that is stored as a multi dimensional array data structure. 
+Array - Array is like a grid, if that is a one dimensional array, is pretty much like a list and just like a list, it's ordered mutable and enclosed in square brackets.
+Array of values needs to be of the same data type. [1,2,3,4]
+A two dimensional array is like a list of lists.
+It can be referred to as a matrix. Matrices are arranged in rows and columns. Two dimensional arrays have two axes.
+[1,2,3]
+[4,5,6]
+Two dimensional arrays have two axes. The zero axis is in the direction of the rows and the one axis is in the direction of the columns.
+Numpy has more mathematical and computation abilities compare to list. 
+Converting list into numpy array
+list = [2,4,6,8]
+import numpy as np
+np.array(object,dtype) --> np.array(list)
+np.shape(list)
+Numpy array --> np.array([1,1,1,1])
+Tuple to array --> np.array((1,2,3))
+For set we have to convert it into list before converting into array.
+arrat2D = ([[2,4,6], [8,10,12]])
+2D array fro, list 
+list1  = [1,2,3]
+list2 = [4,5,6]
+np.array([list1,list2])
+np.array([list1,list2],dtype=longdouble)
+np.array([list1,list2],dtype='g') long double offers a higher degree of precision.
 
+Day 2
